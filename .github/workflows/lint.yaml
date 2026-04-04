@@ -16,7 +16,7 @@ jobs:
     env:
       config_file_name: .tflint.hcl
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         name: Checkout source code
 
       - name: Set up config file
@@ -53,7 +53,7 @@ jobs:
     name: terraform fmt
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v6
       
       - uses: opentofu/setup-opentofu@v1
         with:
@@ -72,7 +72,7 @@ jobs:
     env:
       config_file_name: .markdownlint-cli2.jsonc
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
         name: Checkout source code
 
       - uses: DavidAnson/markdownlint-cli2-action@v20
